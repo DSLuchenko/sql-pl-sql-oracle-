@@ -1,5 +1,5 @@
-/* Formatted on 18/08/2022 13:55:03 (QP5 v5.277) */
---Пример PK и FK
+п»ї/* Formatted on 18/08/2022 13:55:03 (QP5 v5.277) */
+--РџСЂРёРјРµСЂ PK Рё FK
 
 DROP TABLE SQL_Party;
 DROP TABLE SQL_Address;
@@ -52,19 +52,19 @@ ADD CONSTRAINT t_partyid_fk FOREIGN KEY (t_partyid)
 
 
 INSERT INTO SQL_Party p (t_id, t_name)
-     VALUES (1, 'Дмитрий');
+     VALUES (1, 'Р”РјРёС‚СЂРёР№');
 
 INSERT INTO SQL_Party p (t_id, t_name)
-     VALUES ('Дмитрий');                             -- ошибка ключ null
+     VALUES ('Р”РјРёС‚СЂРёР№');                             -- РѕС€РёР±РєР° РєР»СЋС‡ null
 
 INSERT INTO SQL_Party p (t_id, t_name)
-     VALUES (1, 'Вова');                 -- ошибка уникальности ключа
+     VALUES (1, 'Р’РѕРІР°');                 -- РѕС€РёР±РєР° СѓРЅРёРєР°Р»СЊРЅРѕСЃС‚Рё РєР»СЋС‡Р°
 
 INSERT INTO SQL_Address p (t_id, t_adress, t_partyid)
-     VALUES (1, 'Брянск', 2);                         --ошибка нет ключа в таблице SQL_Party
+     VALUES (1, 'Р‘СЂСЏРЅСЃРє', 2);                         --РѕС€РёР±РєР° РЅРµС‚ РєР»СЋС‡Р° РІ С‚Р°Р±Р»РёС†Рµ SQL_Party
 
 INSERT INTO SQL_Address p (t_id, t_adress, t_partyid)
-     VALUES (1, 'Брянск', 1);
+     VALUES (1, 'Р‘СЂСЏРЅСЃРє', 1);
 
 DELETE SQL_Address
  WHERE t_id = 1;
